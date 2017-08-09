@@ -1,0 +1,19 @@
+//Leadwerks Material File
+
+blendmode=0
+castshadows=0
+zsort=1
+cullbackfaces=1
+depthtest=1
+pickmode=1
+depthmask=1
+diffuse=0.250980407,0.250980407,0.250980407,0.250980407
+specular=1.00000000,1.00000000,1.00000000,0.501960814
+alwaysuseshader=0
+roughness=0.50000000000000000
+mappingscale=1.00000000,1.00000000,1.00000000
+drawmode=-1
+
+shader="Shaders/Model/refraction.shader"
+texture0="./glass.tex"
+texture1="./glass_dot3.tex"

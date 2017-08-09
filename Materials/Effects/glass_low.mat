@@ -1,0 +1,19 @@
+//Leadwerks Material File
+
+blendmode=1
+castshadows=0
+zsort=1
+cullbackfaces=1
+depthtest=1
+pickmode=1
+depthmask=1
+diffuse=0.250980407,0.250980407,0.250980407,0.501960814
+specular=1.00000000,1.00000000,1.00000000,0.501960814
+alwaysuseshader=0
+roughness=0.50000000000000000
+mappingscale=1.00000000,1.00000000,1.00000000
+drawmode=-1
+
+shader="Shaders/Model/diffuse.shader"
+texture0="materials/glass/glass01.tex"
+
