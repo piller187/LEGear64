@@ -1,3 +1,4 @@
+import "Scripts/LCS.lua"
 import("Scripts/Menu.lua")
 
 --Initialize Steamworks (optional)
@@ -42,12 +43,14 @@ local mapfile = System:GetProperty("map")
 if mapfile~="" then
 	if Map:Load(mapfile)==false then return end
 	prevmapname = FileSystem:StripAll(changemapname)
+
+	CallPostStart(world)
 	
 	--Send analytics event
 	Analytics:SendProgressEvent("Start",prevmapname)
 	
 	gamemenu.newbutton:SetText("RESUME GAME")
-	window:HideMouse()
+	--window:HideMouse()
 else
 	gamemenu:Show()
 end
@@ -74,6 +77,8 @@ while window:Closed()==false do
 		--Load the next map
 		if Map:Load("Maps/"..changemapname..".map")==false then return end
 		prevmapname = changemapname
+		
+		CallPostStart(world)
 		
 		--Send analytics event
 		Analytics:SendProgressEvent("Start",prevmapname)
